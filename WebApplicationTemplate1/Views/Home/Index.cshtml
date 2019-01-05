@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4 jumbotron jumbotron-padding">
+        <h3>Dodaj płatność</h3>
+        <form onsubmit="AddPaymentSubmit()">
+            <div class="form-group">
+                <label for="paymenttype">Rodzaj płatności</label>
+                <select class="form-control" id="paymenttype">
+                    <option value="1">Jedzenie</option>
+                    <option value="2">Paliwo</option>
+                    <option value="3">Rozrywka</option>
+                    <option value="4">Odzież</option>
+                    <option value="5">Elektronika</option>
+                    <option value="6">Opłaty stałe</option>
+                    <option value="7">Inne</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="paymentsum">Kwota</label>
+                <input type="number" pattern="^[0-9]{3,}" step="any" class="form-control" id="paymentsum" placeholder="Kwota" />
+            </div>
+            <div class="form-check form-check-inline form-check-bottop-padding">
+                <input type="checkbox" class="form-check-input" id="paymentcard" />
+                <label class="form-check-label" for="paymendcard">Płatność kartą</label>
+            </div>
+            <div class="form-group">
+                <label for="paymentdate">Data</label>
+                <input type="date" class="form-control" id="paymentdate" />
+            </div>
+            <div class="form-group">
+                <label for="paymentcomment">Komentarz</label>
+                <textarea class="form-control" id="paymentcomment"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="AddPaymentSubmit()" class="btn btn-primary" id="payment-submit-button">Zapisz płatnosć</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
